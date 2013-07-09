@@ -1,0 +1,16 @@
+common: &common
+    adapter: postgresql
+    username: alex
+    password: mitu1018
+
+development:
+    <<: *common
+    database: sampleapp_development
+
+test:
+    <<: *common
+    database: sampleapp_test
+
+production:
+    <<: *common
+    database: sampleapp_production
