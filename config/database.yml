@@ -7,10 +7,13 @@ development:
     <<: *common
     database: sampleapp_development
 
-test:
+test: &test
     <<: *common
     database: sampleapp_test
 
 production:
     <<: *common
     database: sampleapp_production
+
+cucumber:
+  <<: *test
